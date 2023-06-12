@@ -1,14 +1,13 @@
 # cloudproject
  # MySQL Replicate
 
-This project aims to set up a MySQL replication environment using Docker Compose on an Ubuntu LTS 22.04 virtual machine.
 Το project έχει σκοπό να φτιάξει ενα MySQL replication περιβάλλον χρησιμοποιώντας docker compose στην εικονική μηχανή Ubuntu LTS 22.04 
 
 ## Προαπαιτούμενα
 
-- Ubuntu LTS 22.04 virtual machine (VM) 
-- Docker and Docker Compose εγκατεστημένα στο vm
-- Βασικές γνώσει του Docker και MySQL replication
+- Ubuntu LTS 22.04 virtual machine (VM)  (https://ubuntu.com/download/desktop)
+- Docker and Docker Compose εγκατεστημένα στο vm (https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-22-04)
+- MySQL replication εγκατάσταση στο vm (https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-22-04)
 
 ## Εγκατάσταση και Ρύθμιση
 
