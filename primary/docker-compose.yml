@@ -1,0 +1,22 @@
+version: '3'
+services:
+  master:
+    image: mysql:5.7
+    command: --server-id=1 --log-bin=mysql-bin --binlog-do-db=Panos&jason --innodb-flush-log-at-trx-commit=1 --sync-binlog=1
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: Panos&jason
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./master_data:/var/lib/mysql
+
+  slave:
+    image: mysql:5.7
+    command: --server-id=2 --innodb-flush-log-at-trx-commit=1 --sync-binlog=1
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+    volumes:
+      - ./slave_data:/var/lib/mysql
+    depends_on:
+      - master
